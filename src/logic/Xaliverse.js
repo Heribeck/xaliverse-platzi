@@ -29,12 +29,9 @@ let XaliburzEnemigo = []
 let botones = []
 let ataqueJugador = []
 let ataqueAleatorio = []
-let inputShikamaru 
-let inputHimawari 
-let inputLokillo
-let inputNaruto 
-let inputHinata 
-let inputKawaki 
+let inputCapipepo 
+let inputRatigueya 
+let inputHipodoge 
 let botontierra 
 let botonFuego 
 let botonagua 
@@ -90,20 +87,14 @@ class Xaliverse{
 
 
 
-let Naruto = new Xaliverse("Naruto" , "./img/mokepons_mokepon_capipepo_attack.webp" , 5, "./capipepo.png")
+let Capipepo = new Xaliverse("Capipepo" , "/public/images/capipepo.png" , 5, "/public/images/capipepo.png")
 
-let Hinata = new Xaliverse("Hinata" ,"./img/mokepons_mokepon_capipepo_attack.webp" , 5, "./capipepo.png")
+let Ratigueya = new Xaliverse("Ratigueya" , "/public/images/ratigueya.png" , 5, "/public/images/ratigueya.png")
 
-let Shikamaru = new Xaliverse("Shikamaru" ,"./img/mokepons_mokepon_hipodoge_attack.webp" , 5, "./hipodoge.png" )
-
-let Kawaki = new Xaliverse("Kawaki" ,"./img/mokepons_mokepon_hipodoge_attack.webp" , 5, "./hipodoge.png")
-
-let Himawari = new Xaliverse("Himawari" ,"./img/mokepons_mokepon_ratigueya_attack.webp" , 5, "./ratigueya.png")
-
-let lokillo = new Xaliverse("lokillo" ,"./img/mokepons_mokepon_ratigueya_attack.webp" , 5, "./ratigueya.png")
+let Hipodoge = new Xaliverse("Hipodoge" , "/public/images/hipodoge.png" , 5, "/public/images/hipodoge.png" )
 
 
-const Naruto_Ataques = [
+const Capipepo_Ataques = [
 {nombre: "💧", id: "boton-agua"},
 {nombre: "💧", id: "boton-agua"},
 {nombre: "💧", id: "boton-agua"},
@@ -111,7 +102,7 @@ const Naruto_Ataques = [
 {nombre: "🌱", id: "boton-tierra"},
 ]
 
-const Hinata_Ataques = [ 
+const Ratigueya_Ataques = [ 
 {nombre: "🔥", id: "boton-fuego"},
 {nombre: "🔥", id: "boton-fuego"},
 {nombre: "🔥", id: "boton-fuego"},
@@ -119,7 +110,7 @@ const Hinata_Ataques = [
 {nombre: "🌱", id: "boton-tierra"},
 ]
 
-const Shikamaru_Ataques = [ 
+const Hipodoge_Ataques = [ 
 {nombre: "🌱", id: "boton-tierra"},
 {nombre: "🌱", id: "boton-tierra"},
 {nombre: "🌱", id: "boton-tierra"},
@@ -127,43 +118,13 @@ const Shikamaru_Ataques = [
 {nombre: "💧", id: "boton-agua"},
 ]
 
-const Kawaki_Ataques = [
-{nombre: "💧", id: "boton-agua"},
-{nombre: "💧", id: "boton-agua"},
-{nombre: "🔥", id: "boton-fuego"},
-{nombre: "🔥", id: "boton-fuego"},
-{nombre: "🌱", id: "boton-tierra"},
-]
-
-const Himawari_Ataques = [
-{nombre: "🌱", id: "boton-tierra"},
-{nombre: "🌱", id: "boton-tierra"},
-{nombre: "🔥", id: "boton-fuego"},
-{nombre: "🔥", id: "boton-fuego"},
-{nombre: "💧", id: "boton-agua"},
-]
-
-const Lokillo_Ataques = [ 
-{nombre: "💧", id: "boton-agua"},
-{nombre: "💧", id: "boton-agua"},
-{nombre: "🌱", id: "boton-tierra"},
-{nombre: "🌱", id: "boton-tierra"},
-{nombre: "🔥", id: "boton-fuego"},
-]
-
-Naruto.ataques.push(...Naruto_Ataques)
+Capipepo.ataques.push(...Capipepo_Ataques)
     
-Hinata.ataques.push(...Hinata_Ataques)
+Ratigueya.ataques.push(...Ratigueya_Ataques)
 
-Shikamaru.ataques.push(...Shikamaru_Ataques)
+Hipodoge.ataques.push(...Hipodoge_Ataques)
     
-Kawaki.ataques.push(...Kawaki_Ataques)
-
-Himawari.ataques.push(...Himawari_Ataques)
-
-lokillo.ataques.push(...Lokillo_Ataques)
-    
-xaliburz.push(Naruto, Hinata, Shikamaru, Kawaki, Himawari, lokillo)
+xaliburz.push(Capipepo, Ratigueya, Hipodoge)
 
 
 function iniciarJuego(){
@@ -181,12 +142,9 @@ function iniciarJuego(){
         `
     contenedorbotones.innerHTML += opcionDeXaliburz 
 
-        inputShikamaru = document.getElementById("Shikamaru")
-        inputHimawari = document.getElementById("Himawari")
-        inputLokillo = document.getElementById("lokillo")
-        inputNaruto = document.getElementById("Naruto")
-        inputHinata = document.getElementById("Hinata")
-        inputKawaki = document.getElementById("Kawaki")
+        inputCapipepo = document.getElementById("Capipepo")
+        inputRatigueya = document.getElementById("Ratigueya")
+        inputHipodoge = document.getElementById("Hipodoge")
 
 })
 
@@ -213,25 +171,17 @@ function unirseAlJuego(){
 function seleccionarmascota(){
     sectionSeleccionarMascota.style.display = "none"
 
-    if (inputNaruto.checked){
-        spanmascota.innerHTML = inputNaruto.id
-        mascotaJugador = inputNaruto.id
-    }else if (inputHinata.checked){
-        spanmascota.innerHTML = inputHinata.id
-        mascotaJugador = inputHinata.id
-    }else if (inputShikamaru.checked){
-        spanmascota.innerHTML = inputShikamaru.id
-        mascotaJugador = inputShikamaru.id
-    } else if (inputKawaki.checked){
-        spanmascota.innerHTML = inputKawaki.id
-        mascotaJugador = inputKawaki.id
-    }else if (inputHimawari.checked){
-        spanmascota.innerHTML = inputHimawari.id
-        mascotaJugador = inputHimawari.id
-    }else if (inputLokillo.checked){
-        spanmascota.innerHTML = inputLokillo.id
-        mascotaJugador = inputLokillo.id
-    }else {
+    if (inputCapipepo.checked){
+        spanmascota.innerHTML = inputCapipepo.id
+        mascotaJugador = inputCapipepo.id
+    }else if (inputRatigueya.checked){
+        spanmascota.innerHTML = inputRatigueya.id
+        mascotaJugador = inputRatigueya.id
+    }else if (inputHipodoge.checked){
+        spanmascota.innerHTML = inputHipodoge.id
+        mascotaJugador = inputHipodoge.id
+    }
+    else {
         alert("¡TIENES QUE SELLECIONAR TU MASCOTA!")
         reiniciarJuego()
     }
