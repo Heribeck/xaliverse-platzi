@@ -2,35 +2,39 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>🖤Xaliverse!🖤</title>
+        <title>¡The Xaliverse!</title>
         <script defer src="./src/logic/Xaliverse.js"></script>
         <link rel="stylesheet" href="./src/ui/Style.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     
     <body>
-        <section id="seleccionar-mascota">
-            <h1 class="titulo">💠¡El Mundo Xaliverse!💠</h1>
+
+        <h1 class="titulo">¡El Mundo De Xaliverse!</h1>
+
+        <section id="seleccionar-mascota" aria-label="Seleccionar mascota">
+            
             <h2 class="subtitulo">💥Elige tu mascota:</h2>
             
-            <div id="contenedor-botones" class="tarjetas">
-
-            </div>
+            <div id="contenedor-botones" class="tarjetas"></div>
 
             <button id="boton-mascota">Seleccionar</button>
+
         </section>
 
-        <section id="ver-mapa">
+        <section id="ver-mapa" aria-label="Opciones del Mapa">
+
             <h2 class="subtitulo">💠ZONA DE MOVIMIENTO DE XALIBURZ💠</h2>
             <canvas id="mapa"></canvas>
             <button onmouseup="detenerMovimiento()" onmousedown="moverArriba()">Arriba</button>
+
             <div>
                 <button onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()">Izquierda</button>
                 <button onmouseup="detenerMovimiento()" onmousedown="moverAbajo()">Abajo</button>
                 <button onmouseup="detenerMovimiento()" onmousedown="moverDerecha()">Derecha</button>
-                
-                 
+
             </div>
+
         </section>
 
         <section id="seleccionar-ataque">
